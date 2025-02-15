@@ -13,7 +13,7 @@ hs_codes <- c("850710", "850720", "780200", "854810",
               "260700", "780110", "780191", "780199")
 
 # Get list of BACI files with correct folder path
-baci_files <- list.files(path = "BACI_HS12_V202401b", 
+baci_files <- list.files(path = "BACI_HS12_V202501", 
                          pattern = "^BACI.*\\.csv$",
                          full.names = TRUE)
 
@@ -26,14 +26,14 @@ baci_combined <- rbindlist(
 )
 
 # Save the result
-fwrite(baci_combined, "BACI_lead_trade_2012_2022.csv")
+fwrite(baci_combined, "BACI_lead_trade_2012_2023.csv")
 print("BACI data has been filtered and merged")
 
 # Modify the combined data to make it easier to deal with
 # Read the CSV files
-baci_data <- read_csv("BACI_lead_trade_2012_2022.csv")
-country_codes <- read.csv("BACI_HS12_V202401b/country_codes_V202401b.csv")
-product_codes <- read.csv("BACI_HS12_V202401b/product_codes_HS12_V202401b.csv")
+baci_data <- read_csv("BACI_lead_trade_2012_2023.csv")
+country_codes <- read.csv("BACI_HS12_V202501/country_codes_V202501.csv")
+product_codes <- read.csv("BACI_HS12_V202501/product_codes_HS12_V202501.csv")
 
 # Step 1: Rename the basic fields
 baci_processed <- baci_data %>%
@@ -81,7 +81,7 @@ baci_processed <- baci_processed %>%
   )
 
 # Write the processed data to a new CSV file
-write_csv(baci_processed, "BACI_lead_trade_2012_2022_modified_vHS.csv")
+write_csv(baci_processed, "BACI_lead_trade_2012_2023_modified_vHS.csv")
 
 # Print a summary to verify the processing
 summary(baci_processed)

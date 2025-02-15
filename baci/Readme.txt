@@ -1,8 +1,8 @@
 BACI
 
-Version: 202401b
+Version: 202501
 
-Release Date: 2024 04 09
+Release Date: 2025 01 30
 
 Weblink: http://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37
 
