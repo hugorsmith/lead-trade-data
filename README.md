@@ -1,6 +1,6 @@
 # Lead Trade Data
 
-This repo contains data on the global trade of lead and lead batteries from 2012 through 2023.
+This repo contains data on the global trade of lead and lead batteries from 2012 through 2023. BACI data is up to date through 2023 (the latest release); Comtrade data only through 2022 due to some annoying features of the free Comtrade API.
 
 It has two folders: 1. *comtrade*: raw trade data from UN's [Comtrade](https://comtradeplus.un.org/) database. 2. *baci*: data from CEPII's [BACI](https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37) database that provides a reconciled (and likely more accurate) version of the Comtrade data. The data is from their HS12 release version 202501.
 
